@@ -12,7 +12,7 @@
     border-radius: 5px 5px 0px 0px;
     
 }
-.create-poll-top{
+.register-top{
     display: flex;
     justify-content:center;
     align-items: center;
@@ -21,22 +21,6 @@
     color: whitesmoke;
     padding: 12px;
     border-radius: 5px;
-}
-.question{
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    margin-bottom: 15px;
-}
-.question label{
-    font-size: 20px;
-    font-weight: 500;
-}
-.question-input{
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #201f1f;
-border-radius: 5px;
 }
 .options{
     display: flex;
@@ -50,10 +34,17 @@ border-radius: 5px;
     column-gap: 20px;
     row-gap: 30px;
 }
-.option-input{
-height: 25px;
-border: 2px solid #201f1f;
-border-radius: 5px;
+.poll-btn{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #003cb4;
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.poll-btn:hover{
+    background-color: #022b7e;
 }
 .btn-container{
     display: flex;

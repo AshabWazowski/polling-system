@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
 import './App.css';
 import CreatePoll from './components/CreatePoll';
+import RegisterVote from './components/RegisterVote';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         {/* Component Routing here */}
         <Routes>
           <Route path='/' element={<CreatePoll/>}/>
+          <Route path='/register-poll' element={<RegisterVote/>}/>
         </Routes>
       </div>
       </BrowserRouter>
