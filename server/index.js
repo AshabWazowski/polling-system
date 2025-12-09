@@ -18,6 +18,8 @@ app.use(express.urlencoded({extended:true}))
 app.use(cors())
 
 app.use("/api", createPoll)
+app.use("/api", createPoll)
+app.use("/get", createPoll)
 app.use("/get", createPoll)
 
 // DB Connectivity
