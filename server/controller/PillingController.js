@@ -14,10 +14,31 @@ export const createPostEntry = async (req, res) =>{
          },
          { new: true , upsert: true}
       );
+      if(updatedPoll){
+         return res.status(200).json({ message: "Poll updated successfully"});
+      }
+      return res.status(500).json({ error: error.message });
       
-      return res.status(200).json({ message: "Poll updated successfully", pollingEntry: updatedPoll });
    } catch(error) {
       return res.status(500).json({ error: error.message });
    }
         
+}
+
+export const getRegisteredPoll = async(req, res)=>{
+
+   try {
+      const pollEntry = await Polling.find({});
+
+      if(!pollEntry){
+         return res.status(500).json({ error: error.message });
+      }
+
+      return res.status(200).json({pollData:pollEntry});
+      
+   } catch (error) {
+      return res.status(500).json({ error: error.message });
+      
+   }
+
 }
